@@ -36,6 +36,36 @@ fun main(){
      * Arreglos bidimensionales
      */
 
-    var enteros = arrayOf({ 3 ; 5, 6, 8, 9},{3, 5,6,7,8})
+    var matriz = arrayOf<Array<Int>>()
 
+    for(i in 0..4){
+        var array = arrayOf<Int>()
+        for( j in 0..4 ){
+            array += 0
+        }
+        matriz += array
+    }
+
+    for(array in matriz){
+        for(value in array){
+            print("$value ")
+        }
+        println()
+    }
+
+    // Llenando datos
+    matriz[2][2] = 1
+    for(i in 1..3){
+        matriz[3][i] = 1
+    }
+    for(i in 0..4){
+        matriz[4][i] = 1
+    }
+
+    for(array in matriz){
+        for(value in array){
+            print("$value ")
+        }
+        println()
+    }
 }
